@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 10000;
 // Sirve todos los archivos estáticos (html, css, js, imagenes)
 app.use(express.static(__dirname));
 
-app.get('*', (req, res) => {
+app.get('/*splat', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
